@@ -11,3 +11,7 @@
 - Boom you have completed the installation
 
 ## How to use and automate the things
+
+- Pin the extension open the linkdin peoples page
+- Click on start
+- It will connect to every body for every 5 seconds for security reasons and testing purpose
