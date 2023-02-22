@@ -15,3 +15,4 @@
 - Pin the extension open the linkdin peoples page
 - Click on start
 - It will connect to every body for every 5 seconds for security reasons and testing purpose
+- Automatically change page once it completed the connection in the current page
