@@ -7,9 +7,17 @@ const sendMessage = async (message) => {
 
 // Function: Receive message from any where
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-  console.log(request.message);
+  if (request.task == "INCREMENT") {
+    document.getElementById("count").innerHTML = request.count;
+  }
 });
 
 document.getElementById("connectbtn").onclick = function () {
-  sendMessage({ task: "AUTOMATE" });
+  if (document.getElementById("connectbtn").innerText == "Connect") {
+    sendMessage({ task: "AUTOMATE" });
+    document.getElementById("connectbtn").innerText = "Stop";
+  } else {
+    sendMessage({ task: "STOP" });
+    document.getElementById("connectbtn").innerText = "Completed";
+  }
 };
