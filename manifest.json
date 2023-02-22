@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "LeadZilla",
+  "description": "Automating the process of connecting with leads",
+  "version": "1.0",
+  "action": {
+    "default_popup": "popups/index.html",
+    "default_icon": "assets/images/logo.png"
+  },
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js", "scripts/automate.js"],
+      "matches": ["http://*/*", "https://*/*"]
+    }
+  ]
+}
