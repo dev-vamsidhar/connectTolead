@@ -14,6 +14,7 @@ var automate = async () => {
     }
   }
   document.querySelector('button[aria-label="Next"]').click();
+  sendMessage({ task: "INCREMENTPAGE", count: "From page 2" });
 };
 
 const DialogOpenAction = () => {

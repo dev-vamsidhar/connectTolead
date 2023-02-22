@@ -9,6 +9,8 @@ const sendMessage = async (message) => {
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.task == "INCREMENT") {
     document.getElementById("count").innerHTML = request.count;
+  } else if (request.task == "INCREMENTPAGE") {
+    document.getElementById("pagecount").innerHTML = request.count;
   }
 });
 
